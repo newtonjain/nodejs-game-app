@@ -1,0 +1,25 @@
+{
+  "name": "nodekick",
+  "version": "0.0.0-37",
+  "decription": "multiplayer fighting game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/amirrajan/nodekick.git"
+  },
+  "dependencies": {
+    "@glimpse/glimpse-node-agent": "^0.10.3",
+    "@glimpse/glimpse-node-server": "^0.10.3",
+    "ejs": "x",
+    "express": "3.6.0",
+    "socket.io": "x",
+    "underscore": "x"
+  },
+  "subdomain": "nodekick",
+  "engines": {
+    "node": "0.10.x"
+  }
+}

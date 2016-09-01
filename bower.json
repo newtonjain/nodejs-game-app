@@ -1,0 +1,12 @@
+{
+  "name": "nodekick",
+  "dependencies": {
+    "jquery": "x",
+    "underscore": "x",
+    "pixi": "x",
+    "animate.css": "x",
+    "jquery.cookie": "x",
+    "soundmanager": "V2.97a.20131201"
+  },
+  "version": "0.0.0"
+}

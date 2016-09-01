@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>nodekick</title>
+    <script src="/bower_components/jquery/jquery.js"></script>
+    <script src="/bower_components/underscore/underscore.js"></script>
+    <script src="/public/jquery.cookie.js"></script>
+  </head>
+  <body>
+    <script>
+      $(function() {
+        $("#name").val($.cookie("name") || "anonymous");
+        
+        $("#join").click(function() {
+          $.cookie("name", $("#name").val());
+          $("form").submit();
+        });
+      });
+    </script>
+    <div id="content" style="width: 100%; max-width: 1280px; margin-left: auto; margin-right: auto">
+      <h1>Nodekick</h1>
+      <hr/>
+      <strong style="font-size: 20px">Join Game</strong>
+      <br/>
+      <br/>
+      <form method="post" action="/join">
+        <div style="padding: 5px">
+          Your Name: <br/>
+          <input type="input" id="name" name="name" placeholder="your name" style="font-size: 16px; width: 300px" /><br/>
+        </div>
+        <div style="padding: 5px">
+          Room: <br />
+          <input type="input" name="room" placeholder="leave blank for the public room" style="font-size: 16px; width: 300px" />
+        </div>
+        <input id="join" type="submit" value="join" style="margin: 5px; font-size: 16px;" />
+      </form>
+      <div>
+        <h3>How to play (bring your friends)</h3>
+        <ul>
+          <li>Join a game by entering your name and a room name (leave it blank to join the public room).</li>
+          <li>Press the <strong>up arrow</strong> on your keyboard to <strong>spawn a fighter</strong>.</li>
+          <li><strong>While standing</strong>, press the <strong>up arrow</strong> on your keyboard to <strong>to jump</strong>.</li>
+          <li><strong>While in the air</strong>, press the <strong>left or right arrow</strong> keys on your keyboard to <strong>attack left and right</strong>.</li>
+          <li><strong>While standing</strong>, press the <strong>down arrow</strong> on your keyboard to <strong>jump backwards</strong>.</li>
+          <li><strong>While standing</strong>, press the <strong>left or right arrow</strong> keys on your keyboard to <strong>change the direction you are facing</strong>.</li>
+        </ul>
+      </div>
+      <div>
+        <hr/>
+        <a href="https://github.com/amirrajan/nodekick" target="_blank">Fork me on GitHub</a>
+        <br/>
+        <br/>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+          <img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/2.0/88x31.png" /></a>
+          This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic License</a>.
+          <br />
+      </div>
+    </div>
+  </body>
+</html>
